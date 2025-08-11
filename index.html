@@ -1,116 +1,2851 @@
-
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<title></title>
-	<meta content="Wii PowerPC Instructions" name="title" />
-	<meta content="A simplification of the PowerPC Instruction set created by Ronion, 95 percent based by JimmyKaz and Kiwi515." name="description" />
-	<meta content="PowerPC, powerpc, wii powerpc, how to make wii cheat codes, wii cheat codes, jimmy kaz, ronion" name="keywords" />
-	<meta content="index, follow" name="robots" />
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<meta content="English" name="language" />
-	<meta content="2 days" name="revisit-after" />
-	<meta content="Jimmy Kaz and Kiwi515" name="author" />
+	<meta content="PowerPC For Dummies" name="title">
+	<meta content="A simplification of the PowerPC Instruction set created by JimmyKaz and Kiwi515. Hopefully, it will allow new people to create gecko codes for the Wii!" name="description">
+	<meta content="PowerPC, powerpc, wii powerpc, how to make wii cheat codes, wii cheat codes, jimmy kaz" name="keywords">
+	<meta content="index, follow" name="robots">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="English" name="language">
+	<meta content="2 days" name="revisit-after">
+	<meta content="Jimmy Kaz and Kiwi515" name="author">
 </head>
 <body data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1017.0" style="background-color:black">
-<p><strong style="color:#f00"><span style="font-size:72px"><span style="font-family:&quot;Edwardian Script ITC&quot;,sans-serif"><iframe frameborder="0" height="68" scrolling="no" src="https://jimkatz.github.io/menupage.html" width="777"></iframe><br />
-PowerPC for Dummies</span></span></strong><br />
-<span style="font-size:36px;"><span style="color:#FFFFFF;">An oversimplification of the Wii PowerPC instruction set.<br />
-Hopefully, it will help people in creating new Gecko and Assembly codes for<br />
+<p><strong style="color:#f00"><span style="font-size:72px"><span style="font-family:&quot;Edwardian Script ITC&quot;,sans-serif"><iframe frameborder="0" height="68" scrolling="no" src="https://jimkatz.github.io/menupage.html" width="777"></iframe><br>
+PowerPC for Dummies</span></span></strong><br>
+<span style="font-size:36px;"><span style="color:#FFFFFF;">An oversimplification of the PowerPC instruction set.<br>
+Hopefully, it will help people in creating new Gecko and Assembly codes for<br>
 Wii Games!</span></span></p>
-<style>
-.lead {
- font-family: Times New Roman;
-  font-size: medium;
-    text-align: center;
-  }
-   </style>
 
 <p>&nbsp;</p>
-<p class="lead"><span style="font-size:20px"><span style="color:#fff">Instructions:</span></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">li</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lis</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lbz</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lhz</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lha</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lhau</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lhaux</font></span></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">lwz</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 20px;">lwzu</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 20px;">lwzx</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">lmw</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">add</span></font></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">addi</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">addis</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">b</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bl</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">blr</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">beq</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bne</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bgt</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">blt</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">ble</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bge</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bng</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bnl</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bso</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bns</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bun</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bnu</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bctr</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bctrl</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bdnz</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bdnzt</font></span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">bdnzf</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">bdz</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">cmp</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">cmpw</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cmpwi</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cmplw</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cmplwi</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cntlzw</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">divw</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">divwu</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">eieio</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">extsb</span></p>
-<p class="lead"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">extsh</span></p>
-<p class="lead"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mr</span></font></p>
-<p class="lead"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mflr</span></font></p>
-<p class="lead"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtlr</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtctr</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtdabr and mfdabr</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtspr</span></font></p>
-<p class="lead"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mulli</span></font></p>
-<p class="lead"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mullw</span></font></p>
-<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">NOT</span></font></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">ori</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">rlwinm</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">slw</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">slwi</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">sraw</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">stb</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">sth</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">stw</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">stwu</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">sub</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subf</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subc, subic, subfic</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subi</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subis</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subfe</font></span></p>
-<p class="lead"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">xoris</font></span><br />
-&nbsp;</p>
-<p class="lead">&nbsp;</p>
 
-	<script> 
-	function newi (instruction, example){ //create a new html element that shows us the instruction and potential example
-	var p = document.createElement("p")
-		p.innerText = instruction	
-		p.class = "lead"
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><span style="color:#fff">Instructions:</span></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">li</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lis</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lbz</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lhz</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lha</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lhau</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">lhaux</font></span></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">lwz</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 20px;">lwzu</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 20px;">lwzx</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">lmw</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">add</span></font></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">addi</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">addis</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">b</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bl</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">blr</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bgelr</font></span></p>
 	
-	}
-	newi("heynerd")	
-	</script>
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bnelr</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">beqlr</font></span></p>
+
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">beq</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bne</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bgt</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">blt</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">ble</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bge</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bng</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bnl</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bso</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bns</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bun</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bnu</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bctr</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bctrl</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bdnz</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">bdnzt</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">bdnzf</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">bdz</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">cmp</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px;text-align:center">cmpw</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cmpwi</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cmplw</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cmplwi</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">cntlzw</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">divw</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">divwu</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">eieio</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">extsb</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:20px">extsh</span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mr</span></font></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mflr</span></font></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtlr</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtctr</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtdabr and mfdabr</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mtspr</span></font></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mulli</span></font></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">mullw</span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:20px">NOT</span></font></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">ori</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">rlwinm</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">slw</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">slwi</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">sraw</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">stb</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">sth</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">stw</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">stwu</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">sub</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subf</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subc, subic, subfic</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subi</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subis</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">subfe</font></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:20px"><font color="#ffffff" face="Rage Italic, sans-serif">xoris</font></span><br>
+&nbsp;</p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center">&nbsp;</p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center"><span style="font-size:72px;"><strong><a href="https://jimkatz.github.io/PowerPC_Examples"><span style="color:#4B0082;">GUIDES AND<br>
+EXAMPLES PAGE</span></a></strong></span></p>
+
+<p style="font-family:&quot;Times New Roman&quot;font-size:medium;text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><strong>V</strong></p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff"><font face="Rage Italic, sans-serif">BIT</font></span></span></p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 24px;">0</span></font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:36px"><span style="color:#FFFFFF"><font face="Rage Italic, sans-serif">BYTE</font></span></span></p>
+
+<p style="text-align:center"><span style="font-size:36px"><span style="color:#FFFFFF"><font face="Rage Italic, sans-serif">00</font></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#fff"><font face="Rage Italic, sans-serif">HALFWORD</font></span></span></p>
+
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#fff"><font face="Rage Italic, sans-serif">0000</font></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:89px"><font color="#ffffff" face="Rage Italic, sans-serif">WORD</font></span></p>
+
+<p style="text-align:center"><span style="font-size:89px"><span style="color:#fff"><font face="Rage Italic, sans-serif">00000000</font></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><strong><span style="font-size:36px"><a id="terms" name="terms"><span style="color:#FFFFFF">Terms:</span></a></span></strong></p>
+
+<hr>
+<p style="text-align:center"><strong><span style="font-size:48px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;text-align:center">Register:</span></span></strong></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">Something that can hold a value, or an address.</font></span></p>
+
+<hr>
+<p style="text-align:center"><strong><span style="font-size:48px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">Count Register:</span></span></strong></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">Something that holds the number for the amount of times something will happen.</font></span></p>
+
+<hr>
+<p style="text-align:center"><strong><span style="font-size:48px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">Floating Point Register:</span></span></strong></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">Something that holds a floating point value. (ex: 1.1)</font></span></p>
+
+<hr>
+<p style="text-align:center"><strong><span style="font-size:48px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">Link Register:</span></span></strong></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">Something that holds an address that can be returned to.</font></span></p>
+
+<p style="text-align:center"><em style=""><font color="#ffffff" style="font-size: 48px;">*See </font><span style="font-size: 48px; color: rgb(255, 0, 0);">"bl"</span><font color="#ffffff" style="font-size: 48px;">&nbsp;and </font><span style="color:#EE82EE;"><font style="font-size: 48px;">"mflr"&nbsp;</font></span></em><em style="font-size: 48px;"><font color="#ffffff">instruction*</font></em></p>
+
+<hr>
+<p style="text-align: center;"><strong><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">Stack Frame:</span></span></strong></p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;"><span style="font-size:36px;">Something that when created, allows you to free up registers that couldn't normally be used for operations and store data in them temporarily</span></span></p>
+
+<hr>
+<p style="text-align: center;"><strong><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">"Upper Half"</span></span></strong></p>
+
+<p style="text-align: center;"><span style="font-size:72px;"><span style="color: rgb(255, 255, 255);">0x<span style="background-color:#B22222;">1234</span>5678</span></span></p>
+
+<hr>
+<p style="text-align: center;"><strong><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">"Lower Half"</span></span></strong></p>
+
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255);"><span style="background-color:#000000;">0x1234</span><span style="background-color:#B22222;">5678</span></span></span></p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><a id="other_terms" name="other_terms"><span style="font-size:48px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">Operation Terms:</span></span></a></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:36px;text-align:center">The following operations convert the values in registers to binary.</span></p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:36px">The "check" is done by checking each bit to see if the number is 1&nbsp;or 0</span></font></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">In this context,</font><span style="color:#00FF00"> "true"</span><font color="#ffffff"> is the value "1" and </font><span style="color:#FF0000">"false"</span><font color="#ffffff"> is the value "0"</font></span></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">If the conditions are not met to make the resulting value </font><span style="color:#00FF00">"true",</span><font color="#ffffff"> it will return </font><span style="color:#FF0000">"false".</span></span><br>
+&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:48px"><b>AND</b></span></font></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">If both values are </font><span style="color:#00FF00">true, </span><span style="color:#FFFFFF">the result is</span><span style="color:#00FF00"> true.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:48px"><b>OR</b></span></font></p>
+
+<p style="text-align:center"><span style="font-size:36px"><font color="#ffffff">If at least 1 value&nbsp;is </font><span style="color:#00FF00;">true,&nbsp;</span><font color="#ffffff">the result&nbsp;is </font><span style="color:#00FF00">true</span><font color="#ffffff">.</font></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:48px"><b>NOR</b></span></font></p>
+
+<p style="text-align:center"><font color="#ffffff" style="font-size: 36px; text-align: center;">If at least 1 value is&nbsp;</font><span style="color:#FF0000;"><span style="font-size: 36px; text-align: center;">false</span><font style="font-size: 36px; text-align: center;">,&nbsp;</font></span><font color="#ffffff" style="font-size: 36px; text-align: center;">the result&nbsp;is&nbsp;</font><span style="font-size: 36px; text-align: center; color: rgb(0, 255, 0);">true</span><font color="#ffffff" style="font-size: 36px; text-align: center;">.</font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 48px;"><b>XOR</b></span></font></p>
+
+<p style="text-align: center;"><font color="#ffffff"><span style="font-size: 36px;">Only 1 of the values can be</span></font><span style="color: rgb(0, 255, 0);"><span style="font-size: 36px;">&nbsp;true.</span></span><span style="color: rgb(255, 255, 255); font-size: 36px;">&nbsp;If both are</span><span style="color: rgb(0, 255, 0);"><span style="font-size: 36px;">&nbsp;true,&nbsp;</span></span><span style="color: rgb(255, 255, 255); font-size: 36px;">or if none are&nbsp;</span><span style="color: rgb(0, 255, 0);"><span style="font-size: 36px;">true,</span></span><span style="color: rgb(255, 255, 255); font-size: 36px;">&nbsp;The result is</span><span style="color: rgb(255, 0, 0);"><span style="font-size: 36px;">&nbsp;false.</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 48px;"><b>XNOR</b></span></font></p>
+
+<p style="text-align: center;"><font color="#ffffff"><span style="font-size: 36px;">The result will be&nbsp;</span></font><span style="color: rgb(0, 255, 0);"><span style="font-size: 36px;">true&nbsp;</span></span><font color="#ffffff"><span style="font-size: 36px;">if both values are&nbsp;</span></font><span style="color: rgb(0, 255, 0);"><span style="font-size: 36px;">true&nbsp;</span></span><font color="#ffffff"><span style="font-size: 36px;">or if both values are&nbsp;</span></font><span style="color: rgb(255, 0, 0);"><span style="font-size: 36px;">false.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:48px"><b>NAND</b></span></font></p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:36px">Both values must be </span></font><span style="color:#FF0000"><span style="font-size:36px">false </span></span><font color="#ffffff"><span style="font-size:36px">for the result to be</span></font><span style="color:#00FF00"><span style="font-size:36px"> true.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:48px"><b>XAND</b></span></font></p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:36px">Same thing as XNOR?</span></font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<div style="text-align: center;">&nbsp;</div>
+
+<div style="text-align: center;"><a id="other_other_terms" name="other_other_terms" style="background-size: 16px; background-color: rgb(0, 0, 0); text-align: center;"><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">Other Terms:</span></span></a></div>
+
+<div style="text-align: center;">&nbsp;</div>
+
+<hr>
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><strong><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">"With Update"</span></span></strong></p>
+
+<p style="text-align: center;"><span style="font-size:26px;"><span style="color:#FFFFFF;">An address will be placed into a register after execution of an instruction.</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size:48px;"><span style="color:#FFFFFF;"><strong style="text-align: center;"><span style="font-family: &quot;Rage Italic&quot;, sans-serif;">"</span></strong></span></span><strong style="text-align: center;"><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">Algebric"</span></span></strong></p>
+
+<p style="text-align: center;"><span style="font-size:26px;"><span style="color:#FFFFFF;">The user specified value in an instruction will be treated as a 32 bit value.</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><span style="text-align: center; font-size: 48px;"><span style="color: rgb(255, 255, 255);"><strong><span style="font-family: &quot;Rage Italic&quot;, sans-serif;">"</span></strong></span></span><strong style="text-align: center;"><span style="font-size: 48px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">Indexed"</span></span></strong></p>
+
+<p style="text-align: center;"><span style="font-size:26px;"><span style="color:#FFFFFF;">Calculates an address after execution of an instruction.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:72px;"><span style="text-align: center;"><span style="color: rgb(255, 255, 255);"><strong><a id="pointers" name="pointers"></a>Pointers</strong></span></span></span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center; margin-left: 40px;"><span style="color:#FFFFFF;"><span style="font-size:28px;"><span style="text-align: center;">For a few i</span>nstructions<span style="text-align: center;">, I wrote <strong>"The middle value is a pointer that adds onto the address."</strong></span></span></span></p>
+
+<p style="text-align: center; margin-left: 40px;"><span style="color:#FFFFFF;"><span style="font-size:28px;"><span style="text-align: center;">It's difficult to explain in words so I'll put an example of what a pointer is:</span></span></span><br>
+<br>
+<span style="color:#A9A9A9;"><span style="font-size:48px;"><span style="text-align: center;"><strong><span style="font-size:36px;"><span style="font-family:tahoma,geneva,sans-serif;">stw r0, 0x0(r1)</span></span></strong></span></span></span><br>
+<br>
+<span style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">This instruction will write whatever value is held in r0 into the address held in r1.<br>
+<strong><span style="font-size:48px;">"0x0" is the pointer.</span></strong></span><br>
+&nbsp;</p>
+
+<p style="text-align: center; margin-left: 40px;"><span style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">Let's assume that r0 holds the value "8"<br>
+and that r1 holds the address "80000004"<br>
+<br>
+The instruction would write the value "0x8" into "0x80000004" in memory.<br>
+The pointer was set to 0.</span><br>
+&nbsp;</p>
+
+<p style="text-align: center; margin-left: 40px;"><br>
+<br>
+<span style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">But what if it the pointer was changed?</span></p>
+
+<p style="text-align: center; margin-left: 40px;"><br>
+<br>
+<strong style="color: rgb(169, 169, 169); font-size: 48px; text-align: center;"><span style="font-size: 36px;"><span style="font-family: tahoma, geneva, sans-serif;">stw r0, 0x4(r1)</span></span></strong><br>
+<br>
+<span style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">Assume that r0 still holds the value "8"<br>
+<br>
+This instruction&nbsp;would write the value "0x8" into "0x80000008" in memory.</span><br style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">
+<span style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">The pointer was set to 0x4.<br>
+<br>
+Since the pointer was set to "0x4", it tells the instruction to change the destination address by 0x4<br>
+<br>
+If you wanted to change the address to&nbsp;"0x8000000C" you would need the following instruction:</span><br>
+<br>
+<strong style="text-align: center; color: rgb(169, 169, 169); font-size: 48px;"><span style="font-size: 36px;"><span style="font-family: tahoma, geneva, sans-serif;">stw r0, 0x8(r1)</span></span></strong><br>
+<br>
+<span style="color: rgb(255, 255, 255); font-size: 28px; text-align: center;">I think you get the idea now.</span><br>
+<br>
+&nbsp;</p>
+
+<hr>
+<p style="text-align: center; margin-left: 40px;">&nbsp;</p>
+
+<p style="text-align:center"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;font-size:72px">Instruction List:</span></p>
+
+<p style="text-align:center"><span style="font-size:36px;"><span style="color:#696969"><span style="font-family:&quot;Rage Italic&quot;,sans-serif">If any of this is wrong, contact me on discord:&nbsp;</span></span><span style="color:#FF8C00"><span style="font-family:&quot;Rage Italic&quot;,sans-serif">"JimmyK#2848"</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:28px;"><span style="color:#FF0000;"><span style="text-align: center;"><span style="font-family: &quot;Rage Italic&quot;, sans-serif;"><span style="background-color:#000000;">Yes, I know that the order of registers is usually "rD, rA" etc.</span></span></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:28px;"><span style="color:#FF0000;"><font face="Rage Italic, sans-serif"><span style="background-color:#000000;">For simplicity,</span></font><font face="Rage Italic, sans-serif"><span style="background-color:#000000;">&nbsp;I'm listing it in "order of instance" for each&nbsp;instruction.</span></font></span></span></p>
+
+<p style="text-align:center"><font color="#ff0000" face="Rage Italic, sans-serif"><span style="font-size: 28px;">EXAMPLE:</span></font></p>
+
+<p style="text-align:center"><font color="#ff0000" face="Rage Italic, sans-serif"><span style="font-size: 28px;">or&nbsp;r1, r2, r3</span></font></p>
+
+<p style="text-align:center"><font color="#ff0000" face="Rage Italic, sans-serif"><span style="font-size: 28px;">r1&nbsp;= Register A&nbsp;</span></font></p>
+
+<p style="text-align:center"><font color="#ff0000" face="Rage Italic, sans-serif"><span style="font-size: 28px;">r2&nbsp;= Register B</span></font></p>
+
+<p style="text-align:center"><font color="#ff0000" face="Rage Italic, sans-serif"><span style="font-size: 28px;">r3&nbsp;= Register C</span></font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif;text-align:center">li</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#FFFFFF">Load Immediate</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#FFFFFF">Loads a value into a register.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#FFFFFF">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#FFFFFF">li r0, 5</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff;text-align:center">r0</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">00000000</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">00000005</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff;text-align:-webkit-center">r0 = 0x00000005</span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">lis</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Load Immediate Shifted</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">Loads a value into the upper 16 bits of a register.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px;text-align:center">lis&nbsp;r0, 0xFFFF</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><font color="#ffffff">FFFF0000</font></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff">r0 = 0x</span><font color="#ffffff" style="text-align:center">FFFF0000</font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">lbz</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Byte Zero</span></span></p>
+
+<p style="text-align: center;"><span style="text-align: center; font-size: 20px;"><span style="color: rgb(255, 255, 255);">The first byte from the value stored at the address in Register B is loaded into Register A</span></span><br>
+<span style="text-align: center; color: rgb(255, 255, 255); font-size: 20px;">The middle value is a pointer that adds onto the address.</span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">lbz r12, 0x0(r10)</span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">BEOFRE EXECUTION OF INSTRUCTION:&nbsp;</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">80000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td style="text-align: center;"><font color="#ffffff">00000000</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td style="text-align: center;"><font color="#ffffff">00000000</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000012</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">lhz</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Halfword Zero</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">The first 2 bytes from the value stored at the address in Register B are loaded into Register A</span></span><br>
+<span style="color: rgb(255, 255, 255); font-size: 20px; text-align: center;">The middle value is a pointer that adds onto the address.</span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">lhz r12, 0x0(r10)</span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">BEOFRE EXECUTION OF INSTRUCTION:&nbsp;</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td style="text-align: center;"><font color="#ffffff">00000000</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td style="text-align: center;"><font color="#ffffff">00000000</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00001234</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">lha</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Halfword Algebraic</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:72px;"><span style="color: rgb(255, 255, 255);">Same as lhz?</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br>
+<span style="color:#FFFFFF;"><span style="font-size:20px;">lha r1, 0x0(r2)</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">lhau</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Halfword Algebraic Update</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255);">Same as lhz?</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br>
+<span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;">lhau r1, 0x0(r2)</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">lhaux</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Halfword Algebraic Update Indexed</span></span><br>
+<br>
+<span style="font-size:20px;"><span style="color:#FFFFFF;">Clears the value in Register A and then increments the value in Register B by the value in Register C.</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:20px;"><span style="color:#FFFFFF;">lhaux&nbsp;r1, r2, r3</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">BEOFRE EXECUTION OF INSTRUCTION:&nbsp;</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">r1</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">80001234</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">12345678</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">r2</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">00000000</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">12345678</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">r3</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">00000000</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">00000004</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">80001234</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r2</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">1234567C</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r3</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000004</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="lwz" name="lwz"></a>lwz</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Load Word Zero</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">The value stored at&nbsp;the address in Register B&nbsp;is Loaded into Register A. The middle value is a pointer that adds onto the address</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:20px">lwz r0, 0x0(r1)</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#FFFFFF">r0</span></td>
+			<td style="text-align:center"><font color="#ffffff">00000000</font></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#FFFFFF">r1</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">8055FFAA</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">3333FFFF</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:18px"><span style="color:#FFFFFF">* Once this line of code gets executed, Any and all values that are at memory address 0x8055FFAA will be</span></span>&nbsp;<span style="font-size:18px"><font color="#ffffff">loaded into Register 0. So now, it looks like this</font></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><font color="#ffffff">00000000</font></td>
+			<td style="text-align:center"><span style="color:#fff;text-align:center">3333FFFF</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r1</span></td>
+			<td style="text-align:center"><span style="color:#fff">8055FFAA</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><br>
+<br>
+&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;"><a id="lwzu" name="lwzu"></a>lwzu</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Word Zero Update</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:22px;"><span style="color: rgb(255, 255, 255);">The value in Register A will be loaded into whatever Address is in Register B.<br>
+After the instruction is executed, The address in Register B is updated by the value you specify</span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:20px;"><span style="color:#FFFFFF;">lwzu r1, 4(r2)</span></span><br>
+<br>
+<span style="color: rgb(255, 255, 255); font-size: 12px; text-align: center;">BEOFRE EXECUTION OF INSTRUCTION:&nbsp;</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><font color="#ffffff">00000000</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000008</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r2</span></td>
+			<td style="text-align: center;"><font color="#ffffff">80000004</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">00000000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px; text-align: center;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><font color="#ffffff">00000000</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r2</span></td>
+			<td style="text-align: center;"><font color="#ffffff">80000008</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size:20px;"><font color="#ffffff">* Notice how the address in Register 2 is 0x80000008. It changed because it was&nbsp;<br>
+updated by the pointer, which was 0x4.&nbsp;</font></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;"><a id="lwzx" name="lwzx"></a>lwzx</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Load Word Zero Indexed</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 22px;"><span style="color: rgb(255, 255, 255);">The value in Register A will be loaded into whatever Address is in Register C.<br>
+After the instruction is executed, The address in Register C&nbsp;is updated by the value in Register A.<br>
+The new address is stored in Register B</span></span><br>
+<br>
+&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">lwzx&nbsp;r1, r2, r3</span></span><br>
+<br>
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="lmw" name="lmw"></a>lmw</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Load Multiple Words</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:22px">Whatever value is in Register A up until Register 31 is loaded into Register B, the data will then be put into all Registers starting at Register B up until Register 31, for each register, 0x4 is added to the value being loaded. The value in the middle is an optional pointer.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">add</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:36px;"><span style="color: rgb(255, 255, 255);">Add</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:20px;"><span style="color:#FFFFFF;">Increments the value in Register B by the value in Register C and puts the result in Register A.</span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">add r1, r2, r3</span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><font color="#ffffff">r2</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">00000001</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">r3</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">00000004</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000005</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><font color="#ffffff">r2</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000001</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r3</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000004</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">addi</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Add Immediate</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">The value that you specify will be added to whatever is currently in a register.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">addi r0, r0, 4</span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000004</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">addis</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Add Immediate Shifted</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">The value that you specify will be added to the upper half of whatever is currently in a register.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">addis r0, r0, 4</span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00040000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00080000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="b" name="b"></a>b</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">Your code will jump (branch) to a specific place in memory.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="bl" name="bl"></a>bl</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch And Link</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">Your code will jump to the start of a function, the instructions of&nbsp;said function will be executed until a&nbsp;</span><strong><span style="color:#f00">blr&nbsp;</span></strong><span style="color:#fff">statement is reached, once it's reached, the code will jump back to the bl&nbsp;instruction and execute every instruction below it.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="blr" name="blr"></a>blr</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch To Link Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">Your code will jump to whatever address is held in the link register.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
 	
-</body>
-</html>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="bgelr" name="bgelr"></a>bgelr</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Greater Than Or Equal To Link Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">Your code will jump to whatever address is held in the link register if a value is greater than or equal to what its being compared to.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+	
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="bnelr" name="bnelr"></a>bnelr</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Not Equal To Link Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">Your code will jump to whatever address is held in the link register if a value is not equal to what its being compared to.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+	
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif"><a id="beqlr" name="beqlr"></a>beqlr</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Equal To Link Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">Your code will jump to whatever address is held in the link register if a value is equal to what its being compared to.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">beq</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Equal</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">If the value specified in a Compare Statement is equal to the value in a register. A branch is taken.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#FFFFFF">cmpwi r0, 5</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:24px"># If register 0&nbsp;holds the value 0x00000005, the following instruction will be executed</span></span></p>
+
+<p style="text-align:center"><span style="color:#FF0000"><span style="font-size:36px">beq test</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080;font-size:24px;text-align:center"># The code will now jump to a function named "test" since the value in register 0&nbsp;was equal to the value in the compare instruction.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bne</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Not Equal</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">If the value specified in a Compare Statement is not equal to the value in a register. A branch is taken.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">cmpwi r0, 5</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:24px"># If register 0&nbsp;does not hold the value 0x00000005, the following instruction will be executed</span></span></p>
+
+<p style="text-align:center"><span style="color:#f00"><span style="font-size:36px">bne&nbsp;test</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080;font-size:24px"># The code will now jump to a function named "test" since the value in register 0&nbsp;was not equal to the value in the compare instruction.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bgt</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Greater Than</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">If the value specified in a Compare Statement is Greater than the value in a register. A branch is taken.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">cmpwi r0, 5</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:24px"># If register 0&nbsp;holds a value greater than 0x00000005 the following instruction will be executed</span></span></p>
+
+<p style="text-align:center"><span style="color:#f00"><span style="font-size:36px">bgt&nbsp;test</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080;font-size:24px"># The code will now jump to a function named "test" since the value in register 0&nbsp;was greater than the value in the&nbsp;compare instruction.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">blt</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Less Than</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">If the value specified in a Compare Statement is Less than&nbsp;the value in a register. A branch is taken.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">cmpwi r0, 5</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:24px"># If register 0&nbsp;holds a value less than 0x00000005&nbsp;the following instruction will be executed</span></span></p>
+
+<p style="text-align:center"><span style="color:#f00"><span style="font-size:36px">blt&nbsp;test</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080;font-size:24px"># The code will now jump to a function named "test" since the value in register 0&nbsp;was less than the value in the&nbsp;compare instruction.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">ble</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Less Than Or Equal To</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">If the value specified in a Compare Statement is Less than or equal to&nbsp;the value in a register. A branch is taken.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">cmpwi r0, 5</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:24px"># If register 0&nbsp;holds a value less than or equal to 0x00000005&nbsp;the following instruction will be executed</span></span></p>
+
+<p style="text-align:center"><span style="color:#f00"><span style="font-size:36px">ble&nbsp;test</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080;font-size:24px"># The code will now jump to a function named "test" since the value in register 0&nbsp;was either 5 or&nbsp;less than 5</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bge</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Greater Than Or Equal To</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="font-size:20px"><span style="color:#fff">If the value specified in a Compare Statement is Greater than or equal to&nbsp;the value in a register. A branch is taken.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">cmpwi r0, 5</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:24px"># If register 0&nbsp;holds a value less than or equal to&nbsp;0x00000005&nbsp;the following instruction will be executed</span></span></p>
+
+<p style="text-align:center"><span style="color:#f00"><span style="font-size:36px">bge test</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080;font-size:24px"># The code will now jump to a function named "test" since the value in register 0&nbsp;was either 5 or&nbsp;greater than&nbsp;5</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<div>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bng</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Not Greater&nbsp;Than</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff">Use ble instead.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bnl</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Not Less Than</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff">Use bge&nbsp;instead.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+</div>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bso</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Summary Overflow</span></span></p>
+
+<p style="text-align:center"><span style="color:#666666"><span style="font-size:72px">Currently Unknown. To be added</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bns</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Not Summary Overflow</span></span></p>
+
+<p style="text-align:center"><span style="color:#666"><span style="font-size:72px">Currently Unknown. To be added</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bun</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Unordered</span></span></p>
+
+<p style="text-align:center"><span style="color:#666"><span style="font-size:72px">Currently Unknown. To be added</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bnu</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch If Not Unordered</span></span></p>
+
+<p style="text-align:center"><span style="color:#666"><span style="font-size:72px">Currently Unknown. To be added</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="bctr" name="bctr"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bctr</span></span></a></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch To Count Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#FFFFFF">Your code will jump to the address that you&nbsp;stored in the count register.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#696969"># Assume r10 = 0x80004508</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#EE82EE">mtctr r10</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#FF0000">bctr</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#696969"># The code would now jump to the address 0x80004508</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="bctrl" name="bctrl" style="background-color:black"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bctrl</span></span></a></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Branch To Count Register And Link</span></span></p>
+
+<p style="text-align:center"><span style="color: rgb(255, 255, 255); font-size: 24px; text-align: center;">Your code will jump to the address that you</span><span style="color: rgb(255, 255, 255); font-size: 24px; text-align: center;">&nbsp;stored in the count register. The code will jump back to it's original function when a </span><span style="color:#FF0000;"><span style="font-size: 24px; text-align: center;">blr</span></span><span style="color: rgb(255, 255, 255); font-size: 24px; text-align: center;"> instruction is reached. Once it's reached, the very next instruction is executed</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#696969"># Assume r10 = 0x80004508</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF;"><span style="font-size:22px">function:</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#ee82ee">mtctr r10</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#f00">bctrl</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF;"><span style="font-size: 22px;">function_at_address_80004508:</span></span></p>
+
+<p style="text-align:center"><font color="#ff0000"><span style="font-size: 22px;">blr</span></font><span style="color:#696969;"><span style="font-size: 22px;"> </span></span></p>
+
+<p style="text-align:center"><span style="color: rgb(105, 105, 105); font-size: 22px; text-align: center;"># When the blr is reached,</span><span style="color:#696969;"><span style="font-size: 22px;"> the code will jump back to "function" and move on to the "li" instruction</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="bdnz" name="bdnz" style="background-size:16px"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bdnz</span></span></a></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:26px">Branch if Decremented Count Register Not Zero</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px;"><font color="#ffffff">A function in your code will loop over and over again until The Count Register reaches 0.</font></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:20px">Example:</span></font></p>
+
+<p style="text-align:center"><span style="color:#D3D3D3"><span style="font-size:20px">The loop amount depends on the length set in the Count Register beforehand.</span></span></p>
+
+<p style="text-align:center"><span style="color:#D3D3D3"><span style="font-size:20px">If you set the length in the count register to be "4" for instance, the function would be ran 4 times</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#FF8C00">li </span><span style="color:#FFFFFF">r5, 4 </span><span style="color:#696969"># 4 = Amount of times for function to be ran</span><br>
+<span style="color:#EE82EE">mtctr</span><span style="color:#FFFFFF"> r5 </span><span style="color:#696969"># Register 5 is moved to the count register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#FFFFFF">function_2:</span><br>
+<span style="color:#0000FF">subi </span><span style="color:#FFFFFF">r6, r6, 2 #</span><span style="color:#696969"> This will subtract 2 from the value in Register 6 every time it gets executed, in this case, it will happen 4 times.</span><br>
+<span style="color:#B22222">bdnz </span><span style="color:#FFFFFF">function_2<span style="color:#696969"> </span></span><span style="font-size:22px"><span style="color:#696969"># This will make "function_2"&nbsp;run&nbsp;4 times, this instruction subtracts 1 from the count register every time it's ran, so after 4 times, it will stop as it will then equal 0.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="bdnzt" name="bdnzt" style="background-size:16px"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bdnzt</span></span></a></p>
+
+<p style="text-align:center"><span style="color:#fff"><span style="font-size:26px">Branch if Decremented Count Register Not Zero And If Condition True</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#FFFFFF">Same as </span><span style="color:#800080"><strong>bdnz</strong>, </span><span style="color:#FFFFFF">except the loop will stop if a compare statment returns true (equal)</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="bdnzf" name="bdnzf" style="background-size:16px"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bdnzf</span></span></a></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:26px;text-align:center">Branch if Decremented Count Register Not Zero And If Condition False</span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#fff">Same as&nbsp;</span><span style="color:#800080"><strong>bdnz</strong>,&nbsp;</span><span style="color:#fff">except the loop will stop if a compare statment returns false (not equal)</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="bdz" name="bdz" style="background-size:16px"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">bdz</span></span></a></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:26px">Branch if Decremented Count Register Zero</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#FFFFFF">A function in your code will loop as long as The Count Register holds the value "0"</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="cmp" name="cmp"></a>cmp</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Compare</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:20px">Checks to see if 2 registers are equal to the same value, or 0.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 72px;"><a id="cmp" name="cmp"></a>cmpw</span></font></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Compare Word</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;">Checks to see if 2 registers are equal to the same 32 bit value.</span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">cmpw r0, r1</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">r0</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">00000000</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">44444434</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">r1</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">00000000</span></td>
+			<td style="text-align: center;"><span style="color:#FFFFFF;">44444434</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size:26px;"><font color="#ffffff">The result would be </font><span style="color:#00FF00;">TRUE.</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="cmpwi" name="cmpwi"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">cmpwi</span></font></a></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Compare Word </span></span><span style="color:#fff;font-size:26px;text-align:center">Immediate</span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">Checks to see if a register holds a specific HALFWORD.</span></span></p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:20px">(Any value between -0x8000 and 0x7FFF)</span></font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">cmpwi r0, 0x1</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><font color="#ffffff">00000001</font></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:26px;"><font color="#ffffff">The result would be</font><span style="color:#00FF00;"> TRUE.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 72px;">cmplw</span></font></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Compare Logical Word</span></span></p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;"><span style="font-size: 72px; text-align: center;">Same as cmpw?</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="cmplwi" name="cmplwi"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">cmplwi</span></font></a></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Compare Logical Word&nbsp;</span></span><span style="color:#fff;font-size:26px">Immediate</span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#FFFFFF">Checks to see if a register holds a value up to "65535" (0xFFFF in hex).</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px;"><span style="color: rgb(128, 128, 128); text-align: center;">This instruction can't check for a negative value since it only deals with unsigned integers&nbsp;</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">cmplwi r0, 0x0009</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><font color="#ffffff">00000009</font></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:26px;"><font color="#ffffff">The result would be</font><span style="color:#00FF00;"> TRUE.</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><font color="#ffffff">(I can't show a higher value because it would be in hex and make things confusing)</font></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="cntlzw" name="cntlzw"></a>cntlzw</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Count Leading Zeros Word</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#d3d3d3"><span style="font-size:36px"><strong>Unofficial Definition:</strong></span></span></span></p>
+
+<p style="text-align:center"><span style="color:#A9A9A9"><span style="font-size:28px"><span style="font-family:times new roman,times,serif">Converts the value in a register to binary and checks how zeros come before the first instance of the number 1 in the value.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="color:#A9A9A9"><span style="font-size:28px"><span style="font-size:48px"><span style="font-family:times new roman,times,serif">Example to be added.</span></span></span></span><br>
+&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">divw</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Divide Word</span></span><br>
+<br>
+<span style="color:#FFFFFF;"><span style="font-size:22px;">The value in Register B is divided by the value in Register C, the result is stored in Register A</span></span></p>
+
+<p style="text-align: center;"><span style="text-align: center; font-size: 20px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br style="text-align: center;">
+<span style="color:#FFFFFF;"><span style="font-size:20px;">divw r1, r2, r3</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">divwu</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Divide Word Update</span></span><br>
+<br>
+<span style="color: rgb(255, 255, 255); font-size: 72px; text-align: center;">Same as divw?</span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br>
+<span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;">divwu r1, r2, r3</span></span></p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="eieio" name="eieio"></a>eieio</span></font></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:26px">Enforce In-Order Execution of I/O</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#d3d3d3"><span style="font-size:36px"><strong>Unofficial Definition:</strong></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:28px"><span style="color:#808080">None of the instructions that store values will be executed until the instructions that load values that were apart of the functions that were running when this instruction was executed finish loading values.... I think....</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">extsb</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Extend Signed Byte</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">Clears the entirety of Register A except for the last byte<br>
+Register B seems to be unused in this instruction.</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">extsb r1, r2</span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255); text-align: center;">00000078</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">extsh</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Extend Signed Halfword</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">Clears the entirety of Register A except for the upper half</span></span><br>
+<span style="color: rgb(255, 255, 255); font-size: 20px; text-align: center;">Register B seems to be unused in this instruction.</span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">extsh r1, r2</span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">12340000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<div style="text-align:center"><a id="mr" name="mr"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">mr</span></font></a></div>
+
+<div>
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Move Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">Moves whatever is in Register B&nbsp;to Register A</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">mr r0, r1</span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#FFFFFF">r0</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">00000000</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#FFFFFF">r1</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">00000000</span></td>
+			<td style="text-align:center"><span style="color:#FFFFFF">0000000F</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">0000000F</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r1</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">0000000F</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff">r0 = 0x</span><font color="#ffffff">0000000F</font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<div style="text-align:center"><a id="mflr" name="mflr" style="background-size:16px"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">mflr</span></font></a></div>
+
+<div>
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Move From Link Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:28px;"><span style="color:#fff">This pretty much just allows you to use the</span><span style="color:#FF0000;"> "bl"</span><span style="color:#fff"> instruction and other "link" instruction types. The register can be pretty much anything.</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">It backs up whatever address is&nbsp;in the register you specify</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<div style="text-align:center"><a id="mtlr" name="mtlr" style="background-size:16px"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">mtlr</span></font></a></div>
+
+<div>
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Move To Link Register</span></span></p>
+
+<p style="text-align:center"><span style="font-size:28px"><span style="color:#fff">If your code has a branch + link instruction of any kind, this is needed before the blr instruction in the exit function.</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">This restores whatever value was in the register before the execution of the </span><span style="color:#DDA0DD">mflr </span><span style="color:#FFFFFF">instruction</span><font color="#dda0dd">.</font></span></p>
+</div>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<div style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="mtctr" name="mtctr"></a>mtctr</span></font></div>
+
+<div>
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Move To Count Register</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:20px">A value is loaded from a specified register, The value tells the code how many times you want something to happen. It is stored in a "Count Register". Usually used <span style="font-size:24px">alongside </span></span></span><span style="font-size:24px"><span style="color:#B22222">bdnz </span><span style="color:#FFFFFF">and </span><span style="color:#800080">stbu/stwu</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">SYNTAX :</span></span></p>
+
+<p style="text-align:center"><span style="color:#A9A9A9"><span style="font-size:20px"># Assume r0 = 0x00000004</span></span></p>
+
+<p style="text-align:center"><span style="font-size:36px"><span style="color:#fff">mtctr r0</span></span></p>
+
+<p style="text-align:center"><span style="color:#808080"><span style="font-size:20px;text-align:center">&ZeroWidthSpace;# The amount of times a certain thing will happen in a code is now "4"</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<div style="text-align: center;">&nbsp;</div>
+
+<div style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 72px;"><a id="mtdabr&amp;mfdabr" name="mtdabr&amp;mfdabr"></a>mtdabr &amp; mfdabr</span></font></div>
+
+<div>
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Move To Data Address Breakpoint Register<br>
+Move From Data Address Breakpoint Regiser</span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size:20px;"><span style="text-align: center; color: rgb(255, 255, 255);">Found in Riivolution's codehandler.bin file.<br>
+<br>
+I'm still looking into this, but it seems like it deals with breakpoints.<br>
+This is the only instruction in the file that PyiiASMH3 won't compile.</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:20px;"><span style="text-align: center; color: rgb(255, 255, 255);">You'll have to manually write it out as a .long instruction </span><strong><span style="color:#FF8C00;"><span style="text-align: center;">(.long 0xXXXXXXXX)&nbsp;</span></span></strong><span style="text-align: center; color: rgb(255, 255, 255);">to get it to compile.<br>
+<br>
+The values are as follows:</span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;">7C15FBA6 = mtdabr r0<br>
+7C35FBA6 = mtdabr r1<br>
+7C55FBA6 = mtdabr r2<br>
+7C75FBA6 = mtdabr r3<br>
+7C95FBA6 = mtdabr r4<br>
+7CB5FBA6 = mtdabr r5<br>
+7CD5FBA6 = mtdabr r6<br>
+7CF5FBA6 = mtdabr r7<br>
+7D15FBA6 = mtdabr r8<br>
+7D35FBA6 = mtdabr r9<br>
+7D55FBA6 = mtdabr r10<br>
+7D75FBA6 = mtdabr r11<br>
+7D95FBA6 = mtdabr r12<br>
+7DB5FBA6 = mtdabr r13<br>
+7DD5FBA6 = mtdabr r14<br>
+7DF5FBA6 = mtdabr r15<br>
+7E15FBA6 = mtdabr r16<br>
+7E35FBA6 = mtdabr r17<br>
+7E55FBA6 = mtdabr r18<br>
+7E75FBA6 = mtdabr r19<br>
+7E95FBA6 = mtdabr r20<br>
+7EB5FBA6 = mtdabr r21<br>
+7ED5FBA6 = mtdabr r22<br>
+7EF5FBA6 = mtdabr r23<br>
+7F15FBA6 = mtdabr r24<br>
+7F35FBA6 = mtdabr r25<br>
+7F55FBA6 = mtdabr r26<br>
+7F75FBA6 = mtdabr r27<br>
+7F95FBA6 = mtdabr r28<br>
+7FB5FBA6 = mtdabr r29<br>
+7FD5FBA6 = mtdabr r30<br>
+7Ff5FBA6 = mtdabr r31</span></p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;">7C15FAA6 = mfdabr r0<br>
+7C35FAA6 = mfdabr r1<br>
+7C55FAA6 = mfdabr r2<br>
+7C75FAA6 = mfdabr r3<br>
+7C95FAA6 = mfdabr r4<br>
+7CB5FAA6 = mfdabr r5<br>
+7CD5FAA6 = mfdabr r6<br>
+7CF5FAA6 = mfdabr r7<br>
+7D15FAA6 = mfdabr r8<br>
+7D35FAA6 = mfdabr r9<br>
+7D55FAA6 = mfdabr r10<br>
+7D75FAA6 = mfdabr r11<br>
+7D95FAA6 = mfdabr r12<br>
+7DB5FAA6 = mfdabr r13<br>
+7DD5FAA6 = mfdabr r14<br>
+7DF5FAA6 = mfdabr r15<br>
+7E15FAA6 = mfdabr r16<br>
+7E35FAA6 = mfdabr r17<br>
+7E55FAA6 = mfdabr r18<br>
+7E75FAA6 = mfdabr r19<br>
+7E95FAA6 = mfdabr r20<br>
+7EB5FAA6 = mfdabr r21<br>
+7ED5FAA6 = mfdabr r22<br>
+7EF5FAA6 = mfdabr r23<br>
+7F15FAA6 = mfdabr r24<br>
+7F35FAA6 = mfdabr r25<br>
+7F55FAA6 = mfdabr r26<br>
+7F75FAA6 = mfdabr r27<br>
+7F95FAA6 = mfdabr r28<br>
+7FB5FAA6 = mfdabr r29<br>
+7FD5FAA6 = mfdabr r30<br>
+7Ff5FAA6 = mfdabr r31</span></p>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><a id="mtspr" name="mtspr" style="background-size:16px;background-color:black"><span style="font-size:72px"><span style="color:#fff;font-family:&quot;Rage Italic&quot;,sans-serif">mtspr</span></span></a></p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:26px">Move To Special Purpose Register</span></font></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:24px">Stores whatever address is in the register you specify in a Link Register called "SPR" (Special Purpose Register)</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#ee82ee">mtspr&nbsp;r10</span></span></p>
+
+<p style="text-align:center"><span style="color:#696969;font-size:22px;text-align:center"># r10 is now stored in the SPR</span></p>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="mulli" name="mulli"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">mulli</span></font></a></p>
+
+<div>
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Multiply Low Immediate</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">Multiplies whatever is in Register B by a specific value and places the result in Register A</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#FFFFFF">&nbsp; mulli r1, r0, 0x2</span></span></p>
+
+<p style="text-align:center"><span style="font-size:16px"><span style="color:#fff;text-align:center">* The value in r0 is multiplied by 2 and the result is stored in register 1.</span></span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000004</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r1</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000004</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r1</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff">r1&nbsp;= 0x</span><font color="#ffffff">00000008</font></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><em><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:48px"><span style="color:#00FF00">Other Information</span></span></span></em></p>
+
+<p style="text-align:center"><span style="font-size:20px"><font color="#ffffff">- To multiply a value in a register and have the value stored in the same register, make both register values the same.</font></span></p>
+
+<p style="text-align:center"><span style="font-size:18px"><font color="#ffffff">(ie.&nbsp;</font><span style="color:#fff;text-align:center">&nbsp;mulli r0, r0, 0x2)&nbsp;</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">mullw</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 26px; text-align: center;">Multiply Low&nbsp;Word</span><br>
+<br>
+<span style="color:#FFFFFF;"><span style="font-size:22px;">Multiplies the value in Register B by the amount in Register C, the result is stored in Register A.</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br>
+<span style="font-size:20px;"><span style="color:#FFFFFF;">mullw r1, r2, r3</span></span></p>
+
+<p style="text-align: center;"><em><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 48px;"><span style="color: rgb(0, 255, 0);">Other Information</span></span></span></em></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><font color="#ffffff">- To multiply a value in a register and have the value stored in the same register, make both register values the same.</font></span></p>
+
+<p style="text-align: center;"><span style="font-size: 18px;"><font color="#ffffff">(ie.&nbsp;</font><span style="color: rgb(255, 255, 255);">&nbsp;mullw&nbsp;r1, r1, r2)&nbsp;</span></span></p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<hr>
+<div>
+<div style="text-align:center">&nbsp;</div>
+
+<div>
+<div style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">NOT</span></font></div>
+
+<div>
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">NOT Operation</span></span></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Makes the value in a register negative&nbsp;</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">not r0, r0</span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000001</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">FFFFFFFE</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center"><br>
+&nbsp;</p>
+</div>
+</div>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">ori</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">OR Immediate</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">Loads a value into the lower 16 bits of a register.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">ori r0, r0, 0xFFFF</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><font color="#ffffff">0000FFFF</font></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff">r0 = 0x0000FFFF</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">rlwinm</span></font></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:24px"><span style="font-family:arial,helvetica,sans-serif">Rotate Left Word Immediate Then AND With Mask</span></span></span></p>
+
+<p style="text-align:center"><span style="color:#A9A9A9;"><span style="font-size:48px;">I don't even know how I could explain this.</span></span><br>
+<br>
+<span style="text-align: center; font-size: 36px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br>
+<span style="font-size:36px;"><span style="text-align: center; color: rgb(255, 0, 0);">rlwinm r1, r2,</span><span style="text-align: center; color: rgb(255, 160, 122);">&nbsp;RotationValue,</span><span style="text-align: center; color: rgb(255, 255, 255);">&nbsp;</span><span style="text-align: center; color: rgb(255, 255, 0);">ValueA,</span></span><span style="text-align: center; color: rgb(255, 165, 0);"><span style="font-size: 24px;"><span style="font-size:36px;">&nbsp;ValueB</span></span></span><br>
+<br>
+&nbsp;</p>
+
+<p style="text-align:center"><span style="color:#FFFFFF;"><span style="font-size:36px;">The value in Register B is "rotated"</span></span><br>
+<span style="color:#FF0000;"><span style="font-size:36px;"><span style="font-size:28px;"><span style="font-family:arial,helvetica,sans-serif;"><strong>(multiplied by 2 to the power of the rotation value)</strong></span></span></span></span><br>
+<span style="color:#FFFFFF;"><span style="font-size:36px;">by the amount specified by the rotation value.<br>
+As for the rest, I have no idea...</span></span><br>
+<br>
+<span style="font-size:48px;"><span style="color:#A9A9A9;">This instruction has all the functionality&nbsp;of: </span><br>
+<span style="font-size:24px;"><span style="color:#FFFFFF;">- extlwi (Extract and Left Justify Immediate)<br>
+-&nbsp;extrwi (Extract and Right Justify Immediate)<br>
+-&nbsp;inslwi (Insert From Left Word Immediate)<br>
+-&nbsp;insrwi (Insert From Right Word Immediate)<br>
+-&nbsp;rotlwi (Rotate Left Word Immediate)<br>
+-&nbsp;rotrwi (Rotate Right Word Immediate)<br>
+-&nbsp;rotlw (Rotate Left Word)<br>
+- slwi (Shift Left Word Immediate)<br>
+-&nbsp;srwi (Shift Right Word Immediate)<br>
+-&nbsp;clrlwi (Clear Left Word Immediate)<br>
+- clrlslwi (Clear Left and Shift Left Word Immediate)</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="slw" name="slw"></a>slw</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Shift Left Word</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#FFFFFF">The value in Register B will be doubled however many times the value in Register C specifies, the result is stored in Register A.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#A9A9A9"><span style="font-size:20px">* For the sake of simplicty, I will be using a different syntax&nbsp;</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:22px;text-align:center">32 &lt;&lt; 1</span></p>
+
+<ul>
+	<li style="text-align:center"><span style="color:#A9A9A9"><span style="font-size:22px;text-align:center">32 = Value to be doubled</span></span></li>
+	<li style="text-align:center"><span style="color:#A9A9A9"><span style="font-size:22px">1 = Amount of times to double</span></span></li>
+</ul>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:22px">&nbsp;The result would be "64"</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:22px;text-align:center">32 &lt;&lt; 2</span></p>
+
+<ul>
+	<li style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:22px">32 = Value to be doubled</span></span></li>
+	<li style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:22px">2 = Amount of times to double</span></span><br>
+	&nbsp;</li>
+	<li style="text-align:center"><font color="#ffffff"><span style="font-size:22px">The result would be "128"</span></font></li>
+	<li style="text-align:center">&nbsp;</li>
+</ul>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="slwi" name="slwi"></a>slwi</span></font></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:26px">Shift Left Word Immediate</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:20px">This can do many different things depending on what the value you specify is.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#808080">If the value is "8"<br>
+- The Code will move a byte to the the upper half of a halfword in the lower half of a register (0xFFFFFF01 -&gt; 0xFFFF0100)</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#808080">If the value is "16"<br>
+- The Code will move a halfword from the lower half of a register to the upper half. (0xFFFF1111 -&gt; 0x11110000)</span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#808080">If the value is "32"<br>
+- The code will clear the value in the register. (0x11111111&nbsp;-&gt; 0x00000000)</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF;"><span style="font-size:22px">The value is taken from Register B and Stored in Register A&nbsp;</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<ul>
+	<li style="text-align:center">&nbsp;</li>
+</ul>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="sraw" name="sraw"></a>sraw</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#FFFFFF">Shift Right Algebraic Word</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">The value in Register B will be halved however many times the value in Register C specifies, the result is stored in Register A.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:20px">* For the sake of simplicty, I will be using a different syntax&nbsp;</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:22px">32 &gt;&gt;&nbsp;1</span></p>
+
+<ul>
+	<li style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:22px">32 = Value to be halved</span></span></li>
+	<li style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:22px">1 = Amount of times to half</span></span></li>
+</ul>
+
+<p style="text-align:center"><span style="color:#fff"><span style="font-size:22px">&nbsp;The result would be "16"</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:22px">32 &gt;&gt; 2</span></p>
+
+<ul>
+	<li style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:22px">32 = Value to be halved</span></span></li>
+	<li style="text-align:center"><span style="color:#a9a9a9"><span style="font-size:22px">2 = Amount of times to half</span></span><br>
+	&nbsp;</li>
+	<li style="text-align:center"><font color="#ffffff"><span style="font-size:22px">The result would be "8"</span></font></li>
+	<li style="text-align:center">&nbsp;</li>
+</ul>
+
+<hr>
+<p style="text-align:center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">stb</span></span></p>
+
+<p style="text-align:center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Store Byte</span></span></p>
+
+<p style="text-align:center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">The last byte of the value in Register A is written to the upper half of the&nbsp;address in Register B</span></span><br>
+<span style="color: rgb(255, 255, 255); font-size: 20px;">The middle value is a pointer that adds onto the address.</span></p>
+
+<p style="text-align:center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align:center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">stb r12, 0x0(r10)</span></p>
+
+<p style="text-align:center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">BEOFRE EXECUTION OF INSTRUCTION:&nbsp;</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align:center;height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td><font color="#ffffff">00000000</font></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align:center;height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">78000000</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td><font color="#ffffff">00000000</font></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<ul>
+	<li style="text-align:center">&nbsp;</li>
+</ul>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">sth</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Store Halfword</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">The last 2 bytes of the value in Register A are written to the upper half of the&nbsp;address in Register B</span></span><br>
+<span style="color: rgb(255, 255, 255); font-size: 20px;">The middle value is a pointer that adds onto the address.</span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">sth r12, 0x0(r10)</span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">BEOFRE EXECUTION OF INSTRUCTION:&nbsp;</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td><font color="#ffffff">00000000</font></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">56780000</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td><font color="#ffffff">00000000</font></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 72px;"><a id="stw" name="stw"></a>stw</span></font></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);">Store Word</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:20px;"><span style="font-size:22px;"><span style="color:#FFFFFF;">The value in Register A is written to whatever address is held in Register B. The middle value is a pointer that adds onto the address.</span></span></span><br>
+&nbsp;</p>
+
+<p style="text-align: center;text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px; text-align: center;">stw r12, 0x0(r10)</span></p>
+
+<p style="text-align: center;text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td><font color="#ffffff">00000000</font></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 12px;">AFTER EXECUTION OF INSTRUCTION:</span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r10</span></td>
+			<td><span style="color: rgb(255, 255, 255);">80000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r12</span></td>
+			<td><font color="#ffffff">00000000</font></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="stwu" name="stwu"></a>stwu</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Store Word And Update</span></span></p>
+
+<p style="text-align:center"><span style="font-size:48px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#d3d3d3"><strong>Unofficial Definition:</strong></span></span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-size:26px">Pushes Data into a Stack frame to allow&nbsp;the use of Registers that normally can't be used for operations.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center;text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">sub</span></span></p>
+
+<p style="text-align:center;text-align: center;"><span style="font-size: 36px;"><span style="color: rgb(255, 255, 255);">Subtract</span></span></p>
+
+<p style="text-align:center;text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">Subtracts the value in Register B by the value in Register C and puts the result in Register A.</span></span><br>
+&nbsp;</p>
+
+<p style="text-align:center;text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align:center;text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">sub r1, r2, r3</span></p>
+
+<p style="text-align:center;text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align:center;height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><font color="#ffffff">r2</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000005</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r3</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000001</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center;text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align:center;height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000004</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><font color="#ffffff">r2</font></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000005</span></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">r3</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td style="text-align: center;"><span style="color: rgb(255, 255, 255);">00000001</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">subf</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);"><span style="font-size:36px;">Subtract From</span></span></span><br>
+<br>
+<span style="font-size:28px;"><span style="color:#FFFFFF;">Read the definition for<strong> "subfe"</strong> since this</span>&nbsp;<span style="color:#FFFFFF;">instruction basically works the same way.</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">syntax:</span></span><br>
+<span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;">subf r1, r2, r3</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">subc, subic, subfic</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 26px;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 36px;">Subtract +&nbsp;"Carrying"</span></span></span><br>
+<br>
+<span style="color: rgb(102, 102, 102); font-size: 72px; text-align: center;">Currently Unknown. To be added</span><br>
+&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">subi</span></span></p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;"><span style="font-size:36px;">Subtract&nbsp;Immediate</span></span></p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;"><span style="font-size:20px;">Subtracts&nbsp;a specific amount from the value in Register B and stores the result in Register A.&nbsp;</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">subi r1, r2, 0x3</span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center;height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td><font color="#ffffff">r2</font></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size:28px;"><span style="color:#FFFFFF;"><span style="text-align: center;"><span style="background-color:#B22222;">r2 value - 0x3</span></span></span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center;height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000005</span></td>
+		</tr>
+		<tr>
+			<td><font color="#ffffff">r2</font></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">subis</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 36px;">Subtract&nbsp;Immediate Shifted</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:26px;"><span style="color:#FFFFFF;">Same as </span><span style="font-size:36px;"><span style="color:#0000FF;">subi,</span></span><span style="color:#FFFFFF;"> except this instruction only subtracts from the</span></span><br>
+<span style="font-size:26px;"><span style="color:#FFFFFF;"><u>upper half</u>&nbsp;(the first 2 bytes) </span></span><span style="color: rgb(255, 255, 255); font-size: 26px; text-align: center;">of the value in Register B&nbsp;</span><span style="font-size:26px;"><span style="color:#FFFFFF;">.<br>
+The result is stored in Register A.</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">subis r1, r2, 0x3</span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td><font color="#ffffff">r2</font></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255); text-align: center;">12315678</span></td>
+		</tr>
+		<tr>
+			<td><font color="#ffffff">r2</font></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255); text-align: center;">12345678</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><span style="font-size: 72px;"><span style="color: rgb(255, 255, 255); font-family: &quot;Rage Italic&quot;, sans-serif;">subfe</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 36px;">Subtract&nbsp;From Extended</span></span></p>
+
+<p style="text-align: center;"><span style="color:#FFFFFF;"><span style="font-size:26px;">Same as</span></span><span style="color:#0000FF;"><span style="font-size:26px;"><span style="font-size:48px;"> <span style="font-size:36px;">sub,</span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:26px;"> with the only difference being that the register order is different.<br>
+The value in Register C is subtracted by the value in Register B and stored in Register A.</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 20px;">subfe&nbsp;r1, r2, r3</span></p>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+		</tr>
+		<tr>
+			<td><font color="#ffffff">r2</font></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000002</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r3</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><span style="font-size: 12px;"><span style="color: rgb(255, 255, 255);">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="text-align: center; height: 5px; width: 113px;" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r1</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000006</span></td>
+		</tr>
+		<tr>
+			<td><font color="#ffffff">r2</font></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000002</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: rgb(255, 255, 255);">r3</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000000</span></td>
+			<td><span style="color: rgb(255, 255, 255);">00000008</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><a id="xoris" name="xoris"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">xoris</span></font></a></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">XOR Immediate Shift</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#A9A9A9">Definition&nbsp;</span><span style="color:#A9A9A9">will be added as soon as I figure out what the actual use for this instruction is.</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-family:arial,helvetica,sans-serif"><span style="color:#D3D3D3"><span style="font-size:36px"><strong>Unofficial Definition:</strong></span></span></span></p>
+
+<p style="text-align:center"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:20px"><span style="color:#FFFFFF"><b>"Copy Register". This can be used to copy the contents of a register</b></span></span></span></p>
+
+<p style="text-align:center"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:20px"><span style="color:#FFFFFF"><b>into another.</b></span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">EXAMPLE :</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-size:20px">xoris r0, r5, 0</span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">BEOFRE EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r5</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff;text-align:center">A55553F4</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff">r0 = 0x</span><span style="color:#fff">00000000</span></p>
+
+<p style="text-align:center"><span style="color:#fff">r5&nbsp;= 0x</span><span style="color:#fff">A55553F4</span></p>
+
+<p style="text-align:center"><span style="font-size:12px"><span style="color:#fff">AFTER EXECUTION OF INSTRUCTION:</span></span></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="height:5px;width:113px" summary="r0 = 0x00000005">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r0</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><span style="color:#fff;text-align:center">A55553F4</span></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><span style="color:#fff">r5</span></td>
+			<td style="text-align:center"><span style="color:#fff">00000000</span></td>
+			<td style="text-align:center"><font color="#ffffff">A55553F4</font></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><span style="color:#fff">r0 = 0x</span><span style="color:#fff;text-align:center">A55553F4</span></p>
+
+<p style="text-align:center"><span style="text-align:center;color:#fff">r5&nbsp;= 0x</span><span style="color:#fff;text-align:center">A55553F4</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:122px"><a id="." name="."></a>.</span></font></p>
+
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#fff">&nbsp; &nbsp; Dot Operand</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">This is not an instruction, but rather an operand. It can be added to the end of certain instructions.</span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">&nbsp; &nbsp;</span><span style="color:#FF0000">It checks to see if the very first register specified in the instruction is equal to 0. </span></span></p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#fff">This is why you will often see branch statements with no matching compare statement.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><a id="Operation_Instructions" name="Operation_Instructions" style="background-size: 16px; background-color: rgb(0, 0, 0); text-align: center;"><span style="color: rgb(255, 0, 0);"><span style="font-size: 72px;"><span style="font-family: &quot;MV Boli&quot;;">Operation Instructions</span></span></span></a></p>
+
+<p style="text-align: center;"><span style="font-size: 28px;"><font color="#ffffff">I'll try not to go into too much technical detail with these.&nbsp;I had a very hard time understanding these at first.</font></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<hr>
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 72px;">OR</span></font></p>
+
+<p style="text-align: center;"><font color="#ffffff"><span style="font-size: 26px;">OR Operation</span></font></p>
+
+<div>
+<p style="text-align: center;"><span style="font-size:26px;"><span style="color:#FFFFFF;">This checks to see if at least one register is equal to a value you specify, The specified value is placed in Register A.<br>
+A compare statement below checks to see if at least one register is equal to the value you specified.</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color:#696969;"><span style="font-size:22px;"># Assume that Register 0 = 0x1</span></span></p>
+
+<p style="text-align: center;"><span style="color:#696969;"><span style="font-size:22px;"># Assume that&nbsp;</span></span><span style="color: rgb(105, 105, 105); font-size: 22px; text-align: center;">Register 1</span><span style="color:#696969;"><span style="font-size:22px;">&nbsp;= 0x3</span></span></p>
+
+<p style="text-align: center;"><span style="font-size:22px;"><span style="color:#FFA07A;"><span style="font-size:20px;">or r2, r0, r1</span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"> </span></span><span style="font-size:18px;"><span style="color:#808080;"># To put it simply, this places the value you're checking the registers for in Register 2</span></span></span></p>
+
+<p style="text-align: center;"><span style="font-size:22px;"><span style="color:#00FF00;"><span style="font-size:20px;">cmpwi r2, 3</span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"> </span></span><span style="color:#696969;"><span style="font-size:20px;"># This checks to see if at least one of the Registers is equal to your specified value, which in this case is "3" </span></span><span style="color:#A52A2A;"><span style="font-size:20px;">(the cmpwi instruction can't compare 2 registers, this is just comparing the value in r2 to the value of the result of the OR operation, which is the value you're checking the registers for)</span></span></span></p>
+
+<p style="text-align: center;"><span style="font-size:22px;"><span style="color:#FF0000;"><span style="font-size:20px;">beq</span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"> function2 </span></span><span style="color:#696969;"><span style="font-size:20px;"># Since the result returned true and one of the registers was equal to 3, the code will branch to "function2"</span></span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+
+<hr>
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size: 72px;">AND</span></font></p>
+
+<p style="text-align: center;"><font color="#ffffff"><span style="font-size: 26px;">AND Operation</span></font></p>
+
+<div>
+<p style="text-align: center;"><span style="color:#FFFFFF;"><span style="font-size:26px;">This checks to see if both registers are equal to a value you specify, The specified value is placed in Register A.<br>
+A compare statement below checks to see if both registers are equal to the value you specified</span></span></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><span style="font-size: 20px;"><span style="color: rgb(255, 255, 255);">EXAMPLE :</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(105, 105, 105);"><span style="font-size: 22px;"># Assume that Register&nbsp;0 = 0x3</span></span></p>
+
+<p style="text-align: center;"><span style="color: rgb(105, 105, 105);"><span style="font-size: 22px;"># Assume that&nbsp;</span></span><span style="color: rgb(105, 105, 105); font-size: 22px;">Register 1</span><span style="color: rgb(105, 105, 105);"><span style="font-size: 22px;">&nbsp;= 0x3</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 22px;"><span style="color: rgb(255, 160, 122);"><span style="font-size: 20px;">and r2, r0, r1</span></span><span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;">&nbsp;</span></span><span style="font-size: 18px;"><span style="color: rgb(128, 128, 128);"># To put it simply, this places the value you're checking the registers for in Register 2</span></span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 22px;"><span style="color: rgb(0, 255, 0);"><span style="font-size: 20px;">cmpwi r2, 3</span></span></span><span style="font-size: 22px; text-align: center; color: rgb(255, 255, 255);"><span style="font-size: 20px;">&nbsp;</span></span><span style="font-size: 22px; text-align: center; color: rgb(105, 105, 105);"><span style="font-size: 20px;"># This checks to see if both Register 0 and Register 1 are equal to your specified value, which in this case is "3"&nbsp;</span></span><span style="font-size: 22px; text-align: center; color: rgb(165, 42, 42);"><span style="font-size: 20px;">(the cmpwi instruction can't compare 2 registers, this is just comparing the value in r2 to the value of the result of the AND&nbsp;operation, which is the value you're checking the registers&nbsp;for)</span></span></p>
+
+<p style="text-align: center;"><span style="font-size: 22px;"><span style="color: rgb(255, 0, 0);"><span style="font-size: 20px;">beq</span></span><span style="color: rgb(255, 255, 255);"><span style="font-size: 20px;">&nbsp;function2&nbsp;</span></span><span style="color: rgb(105, 105, 105);"><span style="font-size: 20px;"># Since the result returned true and both registers were equal to "3" the code will jump to "function2"</span></span></span></p>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="color:#00FF00"><span style="font-size:72px"><span style="font-family:&quot;MV Boli&quot;"><span style="background-color:#000000"><a id="fpi" name="fpi"></a>Floating Point Instructions</span></span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:28px"><font color="#ffffff">Instructions that affect floating point registers and preform opperations. With some instructions being unique to the Wii.</font></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">psq_add</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#FFFFFF">Paired Single Quantized Add</span></span></p>
+
+<p style="text-align:center"><span style="text-align:center;font-size:20px"><span style="color:#fff">The floats in Floating Point Register B&nbsp;and Floating Point Register C&nbsp;are added together. The resulting value is added to whatever is in&nbsp;</span></span><span style="color:#fff;font-size:20px;text-align:center">Floating Point Register A</span><span style="text-align:center;font-size:20px"><span style="color:#fff">&nbsp;</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">psq_sub</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Paired Single Quantized Subtract</span></span></p>
+
+<p style="text-align:center"><font color="#ffffff"><span style="font-size:20px">The float in&nbsp;</span></font><span style="color:#fff;font-size:20px;text-align:center">Floating Point Register B&nbsp;is subtracted by the float in&nbsp;Floating Point Register C. The resulting value is subtracted from Whatever is in Floating Point Register A.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">psq_mul</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Paired Single Quantized Multiply</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">The floats in Floating Point Register B and&nbsp;</span></span><span style="color:#fff;font-size:20px">Floating Point Register C&nbsp;are multiplied together and stored in&nbsp;Floating Point Register A</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px">psq_div</span></font></p>
+
+<p style="text-align:center"><span style="font-size:26px"><span style="color:#fff">Paired Single Quantized Divide</span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#fff">The float&nbsp;in Floating Point Register A&nbsp;is divided by the amount of times the floats in&nbsp;</span></span><span style="color:#fff;font-size:20px">Floating Point Register B and&nbsp;Floating Point Register C divided together equal.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<div>
+<p style="text-align:center"><font color="#ffffff" face="Rage Italic, sans-serif"><span style="font-size:72px"><a id="fsel" name="fsel"></a>fsel</span></font></p>
+
+<p style="text-align:center"><span style="font-size:28px"><span style="font-size:26px"><span style="color:#fff">Floating Select</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:22px"><span style="color:#FFFFFF">If Floating Point Register A is 0, or greater than 0, The value in Floating Point Register D is copied to Floating Point Register C. </span></span>&nbsp;<span style="font-size:22px"><span style="color:#FFFFFF">If Floating Point A is less than 0, The value in Floating Point Register B is copied to Floating Point Register D.</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#D3D3D3">Guide:</span></span></p>
+
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#D3D3D3">Load Address into Register</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:24px"><span style="color:#FFFFFF"><span style="font-family:arial,helvetica,sans-serif">Example : The address 0x800035FF will be loaded in Register 0</span></span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#696969"><font face="arial, helvetica, sans-serif"># This will load the address into register 0</font></span></span></p>
+
+<p style="text-align:center"><span style="font-size:20px"><span style="font-family:times new roman,times,serif"><span style="color:#FFA500">&nbsp; lis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r0, 0x8000</span><br>
+<span style="color:#FF0000">&nbsp; ori&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r0, r0, 0x35FF</span></span></span></p>
+
+<p style="text-align:center"><br>
+<span style="font-size:20px"><span style="color:#696969"><font face="arial, helvetica, sans-serif"># This instruction isn't always needed, but you can add it. This will load the value stored at address 0x800035FF into register 0</font></span></span></p>
+
+<p style="text-align:center"><span style="color:#00f;font-family:arial,helvetica,sans-serif;font-size:20px;text-align:center">lwz r0, 0(r0)</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<hr>
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#d3d3d3">Guide:</span></span></p>
+
+<p style="text-align:center"><span style="font-size:48px"><span style="color:#d3d3d3">Check if a register holds a 32-Bit value</span></span></p>
+
+<p style="text-align:center"><span style="color:#fff;font-family:arial,helvetica,sans-serif;font-size:24px;text-align:center">Example : Register 0 will be checked to see if it holds the value 0xFFFE5645</span></p>
+
+<p style="text-align:center"><span style="font-size:18px"><span style="color:#696969"><span style="font-family:arial,helvetica,sans-serif;text-align:center"># For explaining/example purposes, I will put an instruction that loads a 32 bit value into another register,&nbsp;you'll most likely just be comparing though.</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:18px"><span style="color:#696969"><span style="font-family:arial,helvetica,sans-serif;text-align:center"># This instruction requires the use of 2 different registers, one for the value, and one for comparing</span></span></span></p>
+
+<p style="text-align:center"><span style="font-size:18px"><span style="color:#696969"><span style="font-family:arial,helvetica,sans-serif;text-align:center"># This will put the value 0xFFFE5645 into Register 1</span></span></span></p>
+
+<p style="margin:0;text-align:center"><span style="font-size:22px"><span style="color:#FF8C00">&nbsp; lis r1, 0xFFFE</span></span></p>
+
+<p style="margin:0;text-align:center"><span style="font-size:22px"><span style="color:#FF0000">ori r1, r1, 0x5645</span></span></p>
+
+<p style="margin:0;text-align:center">&nbsp;</p>
+
+<p style="margin:0;text-align:center"><span style="color:#696969;font-family:arial,helvetica,sans-serif;font-size:18px"># This will check if Register 0 is equal to the value in Register 1 (If r0 = 0xFFFE5645)</span></p>
+
+<p style="margin:0;text-align:center">&nbsp;</p>
+
+<p style="margin:0;text-align:center"><span style="font-size:24px"><span style="color:#00FF00">cmpw r0, r1</span></span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<blockquote>
+<hr>
+<p>&nbsp;</p>
+</blockquote>
+
+<p style="text-align:center"><span style="color:#FF0000"><span style="font-size:72px"><span style="font-family:Pristina,sans-serif">Special Thanks</span></span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#FFFFFF"><span style="font-family:tahoma,geneva,sans-serif"><span style="font-size:28px">Kiwi515</span></span></span></strong></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-family:tahoma,geneva,sans-serif;font-size:28px;text-align:center">GibHaltmannKill</span></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF"><span style="font-family:tahoma,geneva,sans-serif;font-size:28px">Paniaal</span></span></p>
+
+<p style="text-align:center"><span style="font-size:28px"><em><span style="font-family:comic sans ms,cursive"><font color="#ff0000">Adamcrossing</font></span></em></span></p>
+
+<p style="text-align:center"><span style="color:#FFFFFF;"><span style="font-size:26px;"><b style="color: rgb(255, 255, 255); font-family: arial, helvetica, sans-serif; font-size: 36px; text-align: center;">TheLordScruffy</b></span></span></p>
+
+<p style="text-align:center"><font color="#ffffff" face="arial, helvetica, sans-serif"><span style="font-size: 36px;"><b>JoshuaMK</b></span></font></p>
+
+<p style="text-align:center"><strong style="font-size: 36px; text-align: center;"><span style="font-family: arial, helvetica, sans-serif;"><font color="#ffffff">Vega</font></span></strong></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+
+</body></html>
